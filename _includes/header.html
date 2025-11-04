@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ site.baseurl }}/">
+      <span class="logo-dot"></span>
+      <span class="brand-text">{{ site.title }}</span>
+    </a>
+    <nav class="nav">
+      {% assign nav = site.pages | where_exp: "p", "p.url contains '/pages/'" | sort: "title" %}
+      <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/">خانه</a>
+      {% for p in nav %}
+        <a class="nav-link {% if page.url == p.url %}active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
