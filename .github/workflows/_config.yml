@@ -1,0 +1,13 @@
+title: مستندات LBank
+description: قالب داکیومنت راست‌به‌چپ برای GitHub Pages
+lang: fa
+timezone: Asia/Tehran
+markdown: kramdown
+permalink: pretty
+theme: null
+baseurl: "/lbankexchange"
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
